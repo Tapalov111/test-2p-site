@@ -1,7 +1,11 @@
 <?php
 
-Route::get('/main', function () {
+Route::get('/', function () {
     return view('main');
+});
+
+Route::get('/boss', function () {
+    return view('boss');
 });
 
 
