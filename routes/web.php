@@ -23,7 +23,7 @@ Route::group(
         });
         Route::get('test',function (){
             return view('user/test');
-        });
+        })->name('user_test');
     }
 );
 
