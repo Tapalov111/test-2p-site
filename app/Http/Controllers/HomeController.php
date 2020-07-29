@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if(\Auth::user()->psychotype_id == 0 )
+        if(\Auth::user() && \Auth::user()->psychotype_id == 0)
         {
             return redirect()->route('user_test');
         }

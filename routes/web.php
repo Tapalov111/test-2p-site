@@ -1,10 +1,20 @@
 <?php
 
 Route::get('/main', function () {
+    if(\Auth::user() && \Auth::user()->psychotype_id == 0)
+    {
+        return redirect()->route('user_test');
+    }
     return view('main');
 });
 
 Route::get('/',function() {
+
+    if(\Auth::user() && \Auth::user()->psychotype_id == 0)
+    {
+        return redirect()->route('user_test');
+    }
+    
     return view('welcome');
 });
 
@@ -18,9 +28,17 @@ Route::group(
         'middleware'    => 'auth',
     ],
     function () {
+        
         Route::get('/',function(){
+
+            if(\Auth::user() && \Auth::user()->psychotype_id == 0)
+            {
+                return redirect()->route('user_test');
+            }
+
             return view('user/main');
         });
+        
         Route::get('test',function (){
             return view('user/test');
         })->name('user_test');
