@@ -1,6 +1,8 @@
 <?php
     if(\Auth::user()->psychotype_id == 0)
-     header('Location:/user/test')
+    {
+        header('Location:/user/test');
+    }
 ?>
 @extends('layouts.app')
 
