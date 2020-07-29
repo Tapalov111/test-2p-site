@@ -1,3 +1,6 @@
+@if( Auth::user() && Auth::user()->psychotype_id == 0 )
+    {{ header('Location:/user/test') }}
+@endif
 <!DOCTYPE html>
 <html>
 <head>
@@ -171,7 +174,7 @@
                         var is_user_logged_in = $( result ).filter( '.is_user_logged_in' ).html();
                         if( typeof is_user_logged_in !== "undefined" ){
                             if( is_user_logged_in !== "1" ){
-                                window.location.href = "http://axiomkz.me//login";
+                                window.location.href = "/login";
                             }
                         }
                         var title = $( result ).filter( '.page_title' ).html();
@@ -286,14 +289,14 @@
                 <a id="logo-container" href="http://axiomkz.me//" class="brand-logo"><img src="http://axiomkz.me//themes/default/assets/img/logo-light.png" /></a>
             </div>
             <ul class="right">
-                <li class="hide_mobi_login"><a href="http://axiomkz.me//login" data-ajax="/login" class="btn-flat waves-effect text-main qdt_hdr_auth_btns">Авторизоваться</a></li>
-                <li class="hide_mobi_login"><a href="http://axiomkz.me//register" data-ajax="/register" class="btn-flat btn btn_primary waves-effect waves-light white-text qdt_hdr_auth_btns">регистр</a></li>
+                <li class="hide_mobi_login"><a href="/login" data-ajax="/login" class="btn-flat waves-effect text-main qdt_hdr_auth_btns">Авторизоваться</a></li>
+                <li class="hide_mobi_login"><a href="/register" data-ajax="/register" class="btn-flat btn btn_primary waves-effect waves-light white-text qdt_hdr_auth_btns">регистр</a></li>
                 <div class="show_mobi_login">
                     <a class="dropdown-trigger" href="#" data-target="log_in_dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path fill="#222" d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" /></svg></a>
                     <ul id="log_in_dropdown" class="dropdown-content">
-                        <li><a href="http://axiomkz.me//login" data-ajax="/login">Авторизоваться</a></li>
-                        <li><a href="http://axiomkz.me//register" data-ajax="/register">регистр</a></li>
+                        <li><a href="/login" data-ajax="/login">Авторизоваться</a></li>
+                        <li><a href="/register" data-ajax="/register">регистр</a></li>
                     </ul>
                 </div>
             </ul>
@@ -310,7 +313,7 @@
 						<h5 class="header col s12 light">Присоединиться 2Polovinka, где вы могли встретить кого угодно, где угодно!</h5>
 					</div>
 					<div class="row center">
-						<a href="http://axiomkz.me//register" class="btn-large waves-effect waves-light btn_primary lighten-1 bold btn_round">Начать</a>&nbsp;&nbsp;&nbsp;
+						<a href="/register" class="btn-large waves-effect waves-light btn_primary lighten-1 bold btn_round">Начать</a>&nbsp;&nbsp;&nbsp;
 						<a href="#how_it_work" class="smooth btn-large btn-flat bold">Узнать больше</a>
 					</div>
 				</div>
@@ -363,7 +366,7 @@
 						<label class="bold">а также</label>
 					</div>
 					<div class="col">
-						<a href="http://axiomkz.me//login" class="waves-effect waves-light btn-flat btn-large bold btn_glossy">Давай начнем</a>
+						<a href="/login" class="waves-effect waves-light btn-flat btn-large bold btn_glossy">Давай начнем</a>
 					</div>
 				</div>
 			</div>
@@ -466,7 +469,7 @@
 					<div class="row">
 						<div class="col s12 center-align dt_get_start">
 							<h4 class="white-text light">Свяжись со своей идеальной родственной душой здесь, 2Polovinka.</h4>
-							<a href="http://axiomkz.me//register" class="waves-effect waves-light btn-flat btn-large bold btn_glossy">Начать</a>
+							<a href="/register" class="waves-effect waves-light btn-flat btn-large bold btn_glossy">Начать</a>
 						</div>
 					</div>
 				</div>

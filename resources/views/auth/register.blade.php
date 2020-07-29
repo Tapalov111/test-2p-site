@@ -40,6 +40,19 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="city_id" class="col-md-4 col-form-label text-md-right">Город</label>
+
+                            <div class="col-md-6">
+                            
+                                <select class="form-control" name="city_id">
+                                    @foreach(\App\city::all() as $city )
+                                        <option value="{{$city->id}}">{{$city->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">

@@ -1,3 +1,7 @@
+@if(\Auth::user()->psychotype_id == 0)
+    {{ header('Location:/user/test')}}
+@else
+
 @extends('layouts.app')
 
 @section('content')
@@ -21,3 +25,4 @@
     </div>
 </div>
 @endsection
+@endif

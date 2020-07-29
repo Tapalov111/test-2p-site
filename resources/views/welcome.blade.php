@@ -1,3 +1,6 @@
+@if( Auth::user() && Auth::user()->psychotype_id == 0 )
+    {{ header('Location:/user/test') }}
+@endif
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
