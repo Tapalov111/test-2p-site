@@ -14,7 +14,6 @@
                     </select>
 
                 </div>
-                <button type="submit">Искать </button>
             </div>
 
             
@@ -26,20 +25,6 @@
                     <select class="form-control" name="gender">
                         <option value="1">Мужчина</option>
                         <option value="2">Женщина</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label for="birthday" class="col-md-4 col-form-label text-md-right">Возраст</label>
-
-                <div class="col-md-6">
-                
-                    <select class="form-control" name="birthday">
-                        <option value="0">Все</option>
-                        @for($i = 18; $i < 70; $i++)
-                            <option value="{{$i}}">{{ $i}}</option>
-                        @endfor
                     </select>
                 </div>
             </div>
@@ -58,15 +43,49 @@
                 </div>
             </div>
             
+            <div class="form-group row">
+                <label for="city_id" class="col-md-4 col-form-label text-md-right">Возраст</label>
+
+                <div class="col-md-6">
+                
+                    <select class="form-control" name="birthday">
+                        <option value="0">Все</option>
+                        @for($i = 18; $i < 80;$i++ )
+                            <option value="{{$i}}">{{$i}}</option>
+                        @endfor
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-4"></div>
+                <div class="col-md-6">
+                    <button class=" form-control btn-primary" type="submit">Искать </button>
+                </div>
+            </div>
         </form>
     </div>
     <br>
     @if(isset($users))
         <div class="container">
-            @foreach($users as $user)
-                {{ $user->id }}{{$user->name}}
-                <br>
-            @endforeach
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                    <th scope="col">Имя</th>
+                    <th scope="col">Birthday</th>
+                    <th scope="col">psychotype_id</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($users as $user)
+                        <tr>
+                        <td>{{$user->name}}</td>
+                        <td>{{$user->birthday}}</td>
+                        <td>{{$user->psychotype_id}}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     @endif
 @endsection

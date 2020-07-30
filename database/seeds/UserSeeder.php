@@ -20,6 +20,7 @@ class UserSeeder extends Seeder
             'email'         => $names[ rand(0,4) ].Str::random(5).'@gmail.com',
             'password'      => Hash::make('password'),
             'gender'        => 1,
+            'birthday'      => '199'.rand(0,9).'-'.rand(1,12).'-'.rand(1,29),
             'city_id'       => rand(0,85),
             'psychotype_id' => rand(1,16),
         ]);
@@ -29,6 +30,7 @@ class UserSeeder extends Seeder
             'email'         => $femaleNames[ rand(0,5) ].Str::random(5).'@gmail.com',
             'password'      => Hash::make('password'),
             'gender'        => 2,
+            'birthday'      => '199'.rand(0,9).'-'.rand(1,12).'-'.rand(1,29),
             'city_id'       => rand(0,85),
             'psychotype_id' => rand(1,16),
         ]);
