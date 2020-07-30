@@ -38,6 +38,10 @@ Route::group(
 
             return view('user/main');
         });
+
+        Route::get('search','SearchController@index');
+
+        Route::post('search','SearchController@search')->name('search');
         
         Route::get('test',function (){
             return view('user/test');

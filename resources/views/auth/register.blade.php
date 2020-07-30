@@ -40,6 +40,15 @@
                         </div>
 
                         <div class="form-group row">
+                                    <label for="name" class="col-md-4 col-form-label text-md-right">AGE</label>
+                            <div class="col-md-6">
+        
+                                    <input id="birthday" type="datetime-local" class="form-control " name="birthday"  required autocomplete="email">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="city_id" class="col-md-4 col-form-label text-md-right">Город</label>
 
                             <div class="col-md-6">
@@ -52,6 +61,19 @@
                             </div>
                         </div>
                         
+
+                        <div class="form-group row">
+                            <label for="city_id" class="col-md-4 col-form-label text-md-right">Пол</label>
+
+                            <div class="col-md-6">
+                            
+                                <select class="form-control" name="gender">
+                                    <option value="1">Мужчина</option>
+                                    <option value="2">Женщина</option>
+                                </select>
+                            </div>
+                        </div>
+
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 

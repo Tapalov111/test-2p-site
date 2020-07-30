@@ -152,6 +152,6 @@ class UserController extends Controller
         \Auth::user()->update([
             'psychotype_id' =>  $psychotype_id,
         ]);
-        header('Location:/main');
+        return redirect()->route('home');
     }
 }
