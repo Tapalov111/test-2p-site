@@ -80,7 +80,7 @@
 			<h4 class="bold">
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path fill="currentColor" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" /></svg>
 
-                                    Премиум пользователи                            </h4>
+                                    Премиум пользователи  или что за фигня                          </h4>
 			<div class="pro_usrs_container">
 									<div class="pro_usr add_me">
 						<a href="http://axiomkz.me//pro" data-ajax="/pro" class="pulse">
