@@ -26,3 +26,4 @@ server.php
 sh.exe.stackdump
 /storage
 webpack.mix.js
+composer-setup.php
