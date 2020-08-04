@@ -7,23 +7,23 @@
 <meta name="title" content="Главная . 2Polovinka">
 <meta name="description" content="Quickdate is the Finest Global Dating Website Around. Connect With Local Singles & Start Your Online Dating Adventure! Enjoy Worldwide Dating with Thrilling Online Chat & More.">
 <meta name="keywords" content="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">
-<link rel="icon" href="http://mysite.net//themes/default/assets/img/icon.png" type="image/x-icon">
-<link href="http://mysite.net//themes/default/assets/css/materialize.min.css" type="text/css" id="materialize" rel="stylesheet" media="screen,projection"/>
-<link href="http://mysite.net//themes/default/assets/css/plugins.css" type="text/css" id="plugins" rel="stylesheet" media="screen,projection"/>
-<link href="http://mysite.net//themes/default/assets/css/style.css" type="text/css" id="style" rel="stylesheet" media="screen,projection"/>
-<link href="http://mysite.net//themes/default/assets/css/overrides.css" type="text/css" id="overrides" rel="stylesheet" media="screen,projection"/>
-<link href="http://mysite.net//themes/default/assets/css/ie.css" type="text/css" id="ie" rel="stylesheet" media="screen,projection"/>
+<link rel="icon" href="{{ asset('themes/default/assets/img/icon.png')}}" type="image/x-icon">
+<link href="{{ asset('/themes/default/assets/css/materialize.min.css')}}" type="text/css" id="materialize" rel="stylesheet" media="screen,projection"/>
+<link href="{{ asset('themes/default/assets/css/plugins.css')}}" type="text/css" id="plugins" rel="stylesheet" media="screen,projection"/>
+<link href="{{ asset('themes/default/assets/css/style.css')}}" type="text/css" id="style" rel="stylesheet" media="screen,projection"/>
+<link href="{{ asset('themes/default/assets/css/overrides.css')}}" type="text/css" id="overrides" rel="stylesheet" media="screen,projection"/>
+<link href="{{ asset('themes/default/assets/css/ie.css')}}" type="text/css" id="ie" rel="stylesheet" media="screen,projection"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
-<link href="http://mysite.net//themes/default/assets/css/night.css" type="text/css" id="night-mode-css" rel="stylesheet" media="screen,projection"/>
+<link href="{{ asset('themes/default/assets/css/night.css')}}" type="text/css" id="night-mode-css" rel="stylesheet" media="screen,projection"/>
 
 <script>
     document_title = document.title;
         window.site_url =  "http://mysite.net/";
-        window.ajax = "http://mysite.net//aj/";
-        window.theme_url = "http://mysite.net//themes/default/";
+        window.ajax = "{{ asset('aj/')}}";
+        window.theme_url = "{{ asset('themes/default/')}}";
         window.worker_updateDelay = '4000';
         window.email_notification = '1';
-        window.media_path = "http://mysite.net//";
+        window.media_path = "{{ asset('')}}";
         window.current_route1 = "/login";
         window.current_route2 = "/";
         window.current_route3 = "/";
@@ -32,7 +32,7 @@
         window.located = "7";
         window.ajaxsend = true;
         window.maintenance_mode = ""
-        var imageAddr = "http://mysite.net//themes/default/assets/img/logof.png" + "?n=" + Math.random();
+        var imageAddr = "{{ asset('themes/default/assets/img/logof.png" + "?n=')}}" + Math.random();
         var startTime, endTime;
         var downloadSize = 5616998;
         var download = new Image();
@@ -52,7 +52,7 @@
           <script src="https://quickdatescript.com/themes/default/assets/js/functions.js" type="text/javascript" id="functions"></script>
 
     <!-- onesignal -->
-    <link rel="manifest" href="http://mysite.net//themes/default/assets/js/OneSignalSDKFiles/manifest.json">
+    <link rel="manifest" href="{{ asset('themes/default/assets/js/OneSignalSDKFiles/manifest.json">
     <script src="https://quickdatescript.com/OneSignalSDKWorker.js" async='async'></script>
     <script>
         var push_user_id = '';
