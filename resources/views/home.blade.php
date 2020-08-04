@@ -1,8 +1,7 @@
-@extends('layouts.staticmain')
+@extends('layouts.static')
+
+@section('title')наконец 
 
 @section('content')
 
-<h3> Главная страница </h3>
-<a href="/profile"> Изменить свой профиль</a>
-
-@endsection
+<h1>да это главная</h1>
