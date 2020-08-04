@@ -333,7 +333,7 @@
                     <div class="row">
                         <div class="col s12 center-align dt_get_start">
                             <h4 class="white-text light">Находите совместимых с вами людей здесь на 2polovinka.</h4>
-                            <a href="http://axiomkz.me//register" class="waves-effect waves-light btn-flat btn-large bold btn_glossy">Начать</a>
+                            <a href="/register" class="waves-effect waves-light btn-flat btn-large bold btn_glossy">Начать</a>
                         </div>
                     </div>
                 </div>
