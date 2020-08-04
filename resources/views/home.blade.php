@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 <!-- title -->
 @section('title-block')Домашняя страница@endsection
@@ -32,6 +33,8 @@
 @section('sitebar')
 	<div class="sitebar">
 		<div class="wp_sitebar">
+
+@extends('layouts.static')
 
 			<div class="my-acc">
 				<div class="acc_ico">

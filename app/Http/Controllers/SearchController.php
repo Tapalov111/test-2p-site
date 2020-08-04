@@ -60,7 +60,7 @@ class SearchController extends Controller
                     ->get();
         } else {
 
-            if($city_id == '*') //Проверка городов
+            if($city_id == '*') //Проверка городов какую выбрали , если выбрали все 
             {
                 $users = \App\User::where('gender',$request->gender)
                         ->where('id','!=',\Auth::user()->id)
