@@ -19330,20 +19330,7 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes React and other helpers. It's a great starting point while
- * building robust, powerful web applications using React + Laravel.
- */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-/**
- * Next, we will create a fresh React component instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-
-__webpack_require__(/*! ./components/Example */ "./resources/js/components/Example.js");
 
 /***/ }),
 
@@ -19356,23 +19343,10 @@ __webpack_require__(/*! ./components/Example */ "./resources/js/components/Examp
 
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /**
- * We'll load jQuery and the Bootstrap jQuery plugin which provides support
- * for JavaScript based Bootstrap features such as modals and tabs. This
- * code may be modified to fit the specific needs of your application.
- */
-
-try {
-  window.Popper = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module 'popper.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()))["default"];
-  window.$ = window.jQuery = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module 'jquery'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-  __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module 'bootstrap'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-} catch (e) {}
-/**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
-
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -19387,19 +19361,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     broadcaster: 'pusher',
 //     key: process.env.MIX_PUSHER_APP_KEY,
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     encrypted: true
+//     forceTLS: true
 // });
-
-/***/ }),
-
-/***/ "./resources/js/components/Example.js":
-/*!********************************************!*\
-  !*** ./resources/js/components/Example.js ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\resources\\js\\components\\Example.js: Support for the experimental syntax 'jsx' isn't currently enabled (6:9):\n\n\u001b[0m \u001b[90m 4 | \u001b[39m\u001b[36mfunction\u001b[39m \u001b[33mExample\u001b[39m() {\u001b[0m\n\u001b[0m \u001b[90m 5 | \u001b[39m    \u001b[36mreturn\u001b[39m (\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 | \u001b[39m        \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"container\"\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 | \u001b[39m            \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"row justify-content-center\"\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 8 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"col-md-8\"\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 9 | \u001b[39m                    \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"card\"\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\nAdd @babel/preset-react (https://git.io/JfeDR) to the 'presets' section of your Babel config to enable transformation.\nIf you want to leave it as-is, add @babel/plugin-syntax-jsx (https://git.io/vb4yA) to the 'plugins' section to enable parsing.\n    at Parser._raise (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:762:17)\n    at Parser.raiseWithData (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:755:17)\n    at Parser.expectOnePlugin (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:8928:18)\n    at Parser.parseExprAtom (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:10244:22)\n    at Parser.parseExprSubscripts (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:9759:23)\n    at Parser.parseMaybeUnary (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:9739:21)\n    at Parser.parseExprOps (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:9609:23)\n    at Parser.parseMaybeConditional (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:9582:23)\n    at Parser.parseMaybeAssign (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:9545:21)\n    at Parser.parseParenAndDistinguishExpression (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:10387:28)\n    at Parser.parseExprAtom (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:10116:21)\n    at Parser.parseExprSubscripts (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:9759:23)\n    at Parser.parseMaybeUnary (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:9739:21)\n    at Parser.parseExprOps (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:9609:23)\n    at Parser.parseMaybeConditional (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:9582:23)\n    at Parser.parseMaybeAssign (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:9545:21)\n    at Parser.parseExpression (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:9497:23)\n    at Parser.parseReturnStatement (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:11651:28)\n    at Parser.parseStatementContent (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:11332:21)\n    at Parser.parseStatement (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:11284:17)\n    at Parser.parseBlockOrModuleBlockBody (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:11864:25)\n    at Parser.parseBlockBody (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:11850:10)\n    at Parser.parseBlock (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:11834:10)\n    at Parser.parseFunctionBody (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:10832:24)\n    at Parser.parseFunctionBodyAndFinish (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:10815:10)\n    at c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:12004:12\n    at Parser.withTopicForbiddingContext (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:11159:14)\n    at Parser.parseFunction (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:12003:10)\n    at Parser.parseFunctionStatement (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:11630:17)\n    at Parser.parseStatementContent (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:11322:21)\n    at Parser.parseStatement (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:11284:17)\n    at Parser.parseBlockOrModuleBlockBody (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:11864:25)\n    at Parser.parseBlockBody (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:11850:10)\n    at Parser.parseTopLevel (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:11215:10)\n    at Parser.parse (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:12922:10)\n    at parse (c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\node_modules\\@babel\\parser\\lib\\index.js:12975:38)");
 
 /***/ }),
 
@@ -19415,16 +19378,14 @@ throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index
 /***/ }),
 
 /***/ 0:
-/*!*********************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/assets/sass/app.sass ./resources/assets/sass/admin.sass ***!
-  \*********************************************************************************************************************************/
+/*!*************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! c:\Server_v2\OpenServer\domains\test-2p-site\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! c:\Server_v2\OpenServer\domains\test-2p-site\resources\sass\app.scss */"./resources/sass/app.scss");
-!(function webpackMissingModule() { var e = new Error("Cannot find module 'c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\resources\\assets\\sass\\app.sass'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-!(function webpackMissingModule() { var e = new Error("Cannot find module 'c:\\Server_v2\\OpenServer\\domains\\test-2p-site\\resources\\assets\\sass\\admin.sass'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+__webpack_require__(/*! c:\Server_v2\OpenServer\domains\www.lar.com\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! c:\Server_v2\OpenServer\domains\www.lar.com\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
