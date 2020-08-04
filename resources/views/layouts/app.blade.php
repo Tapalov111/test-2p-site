@@ -7,31 +7,6 @@
 	<link rel="stylesheet" href="{{ mix('/css/app.css') }}">
 </head>
 <body>
-<br><br>
-<ul>
-	<li class="nav-item">
-		<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-	</li>
-	@if (Route::has('register'))
-		<li class="nav-item">
-			<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-		</li>
-	@endif
-</ul>
-
-
-<div>
-	<a class="dropdown-item" href="{{ route('logout') }}"
-		onclick="event.preventDefault();
-						document.getElementById('logout-form').submit();">
-		Выйти
-	</a>
-
-	<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-		@csrf
-	</form>
-</div>
-
 	@yield('header')
 
 	<div class="wrapper clearfix">

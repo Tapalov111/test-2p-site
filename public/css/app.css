@@ -1,0 +1,246 @@
+/* 
+* style css/sass
+* 2020-new style
+* v1.1
+*/
+
+/* all reset */
+
+* {
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+  font-family: Arial;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* and default */
+
+body {
+  background: silver;
+}
+
+/* and body */
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* and clearfix */
+
+header {
+  background: #1E121D;
+  padding: 20px 50px;
+  border-bottom: 3px solid orange;
+}
+
+.box_logo,
+.box img,
+.box_bell,
+.coins,
+.user_ico {
+  cursor: pointer;
+}
+
+.box_logo,
+.logo,
+.right_menu,
+.box,
+.box_bell,
+.user_ico,
+.acc_ico,
+.info {
+  display: inline-block;
+}
+
+.box_bell {
+  margin-top: 5px;
+}
+
+.box_logo h1 {
+  font-size: 28px;
+  color: deeppink;
+}
+
+.right_menu {
+  float: right;
+}
+
+.box,
+.user_ico {
+  margin: 0 10px;
+}
+
+.coins {
+  border: 1px solid yellow;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.coins img,
+span,
+p {
+  display: inline-block;
+  color: yellow;
+  vertical-align: bottom;
+}
+
+.user_ico img {
+  border: 1px solid orange;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+/*  and header */
+
+/* ---- */
+
+.wrapper {
+  width: 100%;
+  background: #3E253C;
+}
+
+/* and wrapper */
+
+.sitebar {
+  border-right: 1px solid silver;
+  background: #6B4067;
+  width: 300px;
+}
+
+.text_p,
+.premium_button {
+  text-align: center;
+}
+
+.wp_sitebar {
+  padding-top: 80px;
+  margin: 0 25px 0 25px;
+}
+
+.acc_ico img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  border: 2px solid orange;
+  padding: 2px;
+}
+
+.info p {
+  color: #000;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.acc_ico,
+.info {
+  height: 50px;
+}
+
+.text_p {
+  margin-bottom: 15px;
+}
+
+.text_p p {
+  font-size: 12px;
+}
+
+.premium_button {
+  border: 2px solid deeppink;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.premium_button p {
+  color: deeppink;
+  padding: 5px;
+}
+
+.box_find {
+  margin: 25px 0;
+}
+
+.box_find ul li a {
+  font-style: regular;
+  font-size: 17px;
+}
+
+.box_find ul li a:hover {
+  color: orange;
+}
+
+.banner_x2 {
+  background: silver;
+  height: 500px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.banner_x2 p {
+  color: black;
+}
+
+/* and sitebar */
+
+.sitebar,
+.content {
+  display: inline-block;
+  float: left;
+}
+
+.banner {
+  width: 100%;
+  height: 80px;
+  background: silver;
+  margin: 20px;
+}
+
+.content {
+  text-align: center;
+  width: 74%;
+  height: 800px;
+}
+
+.form_search {
+  margin: 20px;
+  height: 400px;
+  width: 100%;
+  border: 2px solid silver;
+  border-radius: 10px;
+}
+
+/* and content */
+
+footer {
+  background: #131313;
+  height: 50px;
+  width: 100%;
+}
+
+footer p {
+  color: white;
+}
+
+/* and footer */
+
