@@ -5,15 +5,16 @@
 	<meta charset="UTF-8">
 	<title>@yield('title-block')</title>
 	<link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+	<script src="{{ asset('js/temp.js') }}"></script>
 </head>
 <body>
 	@yield('header')
-
+	<!-- не помню что бы у меня был static -->
 	<div class="wrapper clearfix">
 		@yield('sitebar')
 		@yield('content')
 	</div>
-
+	<!--  -->
 	@yield('footer')
 </body>
 </html>

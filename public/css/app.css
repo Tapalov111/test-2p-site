@@ -1,7 +1,7 @@
 /* 
 * style css/sass
-* 2020-new style
-* v1.1
+* design fixed
+* v1.2.1
 */
 
 /* all reset */
@@ -20,7 +20,7 @@ h5,
 h6,
 a,
 p {
-  font-family: Arial;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 a {
@@ -35,7 +35,9 @@ li {
 /* and default */
 
 body {
-  background: silver;
+  background: #EDEEF0;
+  margin: 0 auto;
+  width: 1025px;
 }
 
 /* and body */
@@ -49,15 +51,15 @@ body {
 /* and clearfix */
 
 header {
-  background: #1E121D;
-  padding: 20px 50px;
-  border-bottom: 3px solid orange;
+  background: #F9F9F9;
+  padding: 5px 50px;
+  overflow: hidden;
+  box-shadow: 0px 7px 20px -4px rgba(0, 0, 0, 0.3);
 }
 
 .box_logo,
 .box img,
 .box_bell,
-.coins,
 .user_ico {
   cursor: pointer;
 }
@@ -69,17 +71,17 @@ header {
 .box_bell,
 .user_ico,
 .acc_ico,
-.info {
+.info,
+.sitebar,
+.content,
+.box_user {
   display: inline-block;
 }
 
-.box_bell {
-  margin-top: 5px;
-}
-
 .box_logo h1 {
-  font-size: 28px;
-  color: deeppink;
+  margin-top: 5px;
+  font-size: 38px;
+  color: #ED21B1;
 }
 
 .right_menu {
@@ -92,65 +94,70 @@ header {
 }
 
 .coins {
-  border: 1px solid yellow;
-  border-radius: 10px;
-  padding: 5px;
+  padding: 15px 5px 0 5px;
 }
 
 .coins img,
 span,
 p {
   display: inline-block;
-  color: yellow;
+  color: #6E6E6E;
   vertical-align: bottom;
 }
 
-.user_ico img {
-  border: 1px solid orange;
-  border-radius: 50px;
-  width: 40px;
-  height: 40px;
+.box_bell {
+  margin-top: 14px;
+}
+
+.ht {
+  margin-bottom: 5px;
 }
 
 /*  and header */
 
-/* ---- */
-
 .wrapper {
-  width: 100%;
-  background: #3E253C;
+  margin-top: 30px;
 }
 
 /* and wrapper */
 
 .sitebar {
-  border-right: 1px solid silver;
-  background: #6B4067;
-  width: 300px;
+  width: 280px;
+}
+
+.boxes {
+  border: 1px solid silver;
+  margin-top: 20px;
+  background: #F9F9F9;
 }
 
 .text_p,
-.premium_button {
+.premium_button,
+footer {
   text-align: center;
 }
 
 .wp_sitebar {
-  padding-top: 80px;
-  margin: 0 25px 0 25px;
+  margin: 0 0 0 45px;
+}
+
+.my-acc {
+  border: 1px solid silver;
+  padding: 10px;
+  background: #F9F9F9;
 }
 
 .acc_ico img {
   width: 45px;
   height: 45px;
   border-radius: 50px;
-  border: 2px solid orange;
-  padding: 2px;
+  border: 2px solid silver;
 }
 
 .info p {
-  color: #000;
+  color: #6E6E6E;
   font-weight: bold;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .acc_ico,
@@ -174,26 +181,26 @@ p {
 
 .premium_button p {
   color: deeppink;
-  padding: 5px;
+  padding: 3px;
 }
 
 .box_find {
-  margin: 25px 0;
+  padding-left: 10px;
+  margin: 20px 0;
 }
 
 .box_find ul li a {
-  font-style: regular;
-  font-size: 17px;
+  color: #6E6E6E;
+  font-size: 20px;
 }
 
 .box_find ul li a:hover {
-  color: orange;
+  color: deeppink;
 }
 
 .banner_x2 {
   background: silver;
   height: 500px;
-  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -203,43 +210,90 @@ p {
 
 /* and sitebar */
 
-.sitebar,
 .content {
-  display: inline-block;
-  float: left;
+  margin-left: 30px;
+  width: 708px;
 }
 
-.banner {
-  width: 100%;
-  height: 80px;
-  background: silver;
-  margin: 20px;
-}
-
-.content {
+.soc_type,
+.user_name,
+.wp_text {
   text-align: center;
-  width: 74%;
-  height: 800px;
 }
 
-.form_search {
-  margin: 20px;
+.cnf_people {
+  border: 1px solid silver;
+  padding: 5px 25px;
+  background: #F9F9F9;
+}
+
+.wp_name_x {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.wp_name_x p {
+  margin: 0 20px;
+}
+
+.wp_name_x select {
+  margin-left: 20px;
+}
+
+.set_name {
+  margin-top: 5px;
+}
+
+.slider {
+  display: inline-block;
+  width: 400px;
   height: 400px;
-  width: 100%;
-  border: 2px solid silver;
-  border-radius: 10px;
+  background: #1FF6CC;
+  margin-top: 20px;
+}
+
+.box_user {
+  width: 280px;
+  height: 400px;
+  border: 1px solid silver;
+  margin: 20px 0 20px 20px;
+}
+
+.user_name {
+  padding: 5px;
+}
+
+.user_name p {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.wp_text {
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.wp_text p {
+  font-size: 16px;
+}
+
+.message {
+  width: 400px;
+  height: 40px;
+  border: 1px solid silver;
 }
 
 /* and content */
 
 footer {
-  background: #131313;
-  height: 50px;
+  padding: 10px;
+  margin-top: 30px;
   width: 100%;
+  box-shadow: 0 -8px 20px -4px rgba(0, 0, 0, 0.3);
 }
 
 footer p {
-  color: white;
+  margin: 0 4px;
 }
 
 /* and footer */
