@@ -1,6 +1,3 @@
-@if(Auth::user()->psychotype_id === 0 )
-    {{ header('Location:/user/test') }}
-@else
 
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -83,4 +80,3 @@
 </body>
 </html>
 
-@endif
