@@ -29,10 +29,10 @@
 
 	</header>
 @endsection
-<!-- sitebar -->
-@section('sitebar')
-	<div class="sitebar">
-		<div class="wp_sitebar">
+<!-- sidebar -->
+@section('sidebar')
+	<div class="sidebar">
+		<div class="wp_sidebar">
 
 			<div class="my-acc">
 				<div class="acc_ico">
@@ -82,7 +82,7 @@
 			</div> <!-- and boxes -->
 			
 
-		</div>	<!-- and wp_sitebar -->
+		</div>	<!-- and wp_sidebar -->
 	</div>
 @endsection
 <!-- content -->

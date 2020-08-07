@@ -9,9 +9,8 @@
 </head>
 <body>
 	@yield('header')
-	<!-- не помню что бы у меня был static -->
 	<div class="wrapper clearfix">
-		@yield('sitebar')
+		@yield('sidebar')
 		@yield('content')
 	</div>
 	<!--  -->

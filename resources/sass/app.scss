@@ -38,7 +38,7 @@ header {
 .box_logo, .logo, 
 .right_menu, .box,
 .box_bell, .user_ico, 
-.acc_ico, .info, .sitebar, .content, .box_user {display: $bl;}
+.acc_ico, .info, .sidebar, .content, .box_user {display: $bl;}
 //---
 .box_logo h1 {margin-top: 5px; font-size: 38px; color: #ED21B1;}
 .right_menu {float: right;}
@@ -54,12 +54,12 @@ header {
 }
 /* and wrapper */
 
-.sitebar {
+.sidebar {
 	width: 280px;
 }
 .boxes {border: 1px solid silver; margin-top: 20px; background: #F9F9F9;}
 .text_p, .premium_button, footer {text-align: center;} 
-.wp_sitebar {margin: 0 0 0 45px;}
+.wp_sidebar {margin: 0 0 0 45px;}
 .my-acc {border: 1px solid silver; padding: 10px; background: #F9F9F9;}
 // .acc_ico {border: 3px solid red; }
 .acc_ico img {width: 45px; height: 45px; border-radius: 50px; border: 2px solid silver;}
@@ -74,7 +74,7 @@ header {
 .box_find ul li a:hover {color: deeppink;}
 .banner_x2 {background: silver; height: 500px; text-align: center;}
 .banner_x2 p {color: black;}
-/* and sitebar */
+/* and sidebar */
 
 .content {
 	margin-left: 30px;

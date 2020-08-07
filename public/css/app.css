@@ -72,7 +72,7 @@ header {
 .user_ico,
 .acc_ico,
 .info,
-.sitebar,
+.sidebar,
 .content,
 .box_user {
   display: inline-block;
@@ -121,7 +121,7 @@ p {
 
 /* and wrapper */
 
-.sitebar {
+.sidebar {
   width: 280px;
 }
 
@@ -137,7 +137,7 @@ footer {
   text-align: center;
 }
 
-.wp_sitebar {
+.wp_sidebar {
   margin: 0 0 0 45px;
 }
 
@@ -208,7 +208,7 @@ footer {
   color: black;
 }
 
-/* and sitebar */
+/* and sidebar */
 
 .content {
   margin-left: 30px;
