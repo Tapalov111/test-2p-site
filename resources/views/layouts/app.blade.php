@@ -4,7 +4,8 @@
 	{
 		return redirect()->route('user_test');
 	}
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta name="viewport" content="width=device-width, inital-scale=1.0">
