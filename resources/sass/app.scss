@@ -1,37 +1,32 @@
-/* 
-* style css/sass
-* design fixed
-* v1.2.1
-*/
 
-/* all reset */
 * {padding: 0; margin: 0; vertical-align: top;}
 h1, h2, h3, h4, h5, h6, a, p { font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;} 
 a {text-decoration: none; color: white;}
 li {list-style-type: none;}
 $bl: inline-block;
 $ch_point: pointer;
-/* and default */
+
 
 body { 
 	background: #EDEEF0;
 	margin: 0 auto;
 	width: 1025px;
 }
-/* and body */
+
 
 .clearfix:after {
     content: "";
     display: table;
     clear: both;
 }
-/* and clearfix */
+
 
 header {
 	background: #F9F9F9;
 	padding: 5px 50px;
 	overflow: hidden;
 	box-shadow: 0px 7px 20px -4px rgba(0,0,0,0.3);
+	margin-top: auto;
 }
 
 .box_logo, .box img, .box_bell, .user_ico {cursor: $ch_point;}
@@ -47,12 +42,12 @@ header {
 .coins img, span, p {display: $bl; color: #6E6E6E; vertical-align: bottom;}
 .box_bell {margin-top: 14px;}
 .ht { margin-bottom: 5px;}
-/*  and header */ 
+
 
 .wrapper {
 	margin-top: 30px;
 }
-/* and wrapper */
+
 
 .sidebar {
 	width: 280px;
@@ -74,10 +69,10 @@ header {
 .box_find ul li a:hover {color: deeppink;}
 .banner_x2 {background: silver; height: 500px; text-align: center;}
 .banner_x2 p {color: black;}
-/* and sidebar */
+
 
 .content {
-	margin-left: 30px;
+	margin-right: auto;
 	width: 708px;
 }
 .soc_type, .user_name, .wp_text{text-align: center;}
@@ -93,14 +88,13 @@ header {
 .wp_text  { margin: 5px 0; padding: 5px; }
 .wp_text p {font-size: 16px;}
 .message { width: 400px; height: 40px; border: 1px solid silver; }
-/* and content */
+
 
 footer {
 	padding: 10px;
-	margin-top: 30px;
+	margin-bottom: 0px;
 	width: 100%;
 	box-shadow: 0 -8px 20px -4px rgba(0,0,0, 0.3);
 }
 
 footer p { margin: 0 4px; }
-/* and footer */

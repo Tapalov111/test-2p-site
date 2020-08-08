@@ -1,5 +1,5 @@
 body {
-    background: #131313 !important;
+    background: #fff;
     color: #dfdfdf;
 }
 nav, .dropdown-content, .mtc_usrd_content .mtc_usrd_sidebar, .card, .mtc_usrd_content .mtc_usrd_slider .mtc_usrd_actions .btn, .load_more, .load_more:hover, .load_more:focus, .dt_home_filters_prnt.open, .modal, .dt_sections, .dt_settings > form.col, .dt_settings > form.col.profile .sett_prof_cont, .dt_contact > .row > form.col, .dt_login, .dt_how_to_verfy_alrt, .dt_usr_pmnt_cont {
@@ -56,7 +56,7 @@ nav .header_user .dropdown-content:before, nav .header_notifications .dropdown-c
     color: #ffffff;
 }
 .page_footer .footer-copyright {
-    background: #131313;
+    background: #fff;
 }
 .dt_footer_links li a:hover, .page_footer .footer-copyright .dt_foot_langs > a:hover, .dt_login_foot_innr .dt_foot_langs > a:hover {
     color: #e8e8e8;

@@ -7,23 +7,24 @@
 <meta name="title" content="Главная . 2Polovinka">
 <meta name="description" content="Quickdate is the Finest Global Dating Website Around. Connect With Local Singles & Start Your Online Dating Adventure! Enjoy Worldwide Dating with Thrilling Online Chat & More.">
 <meta name="keywords" content="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">
-<link rel="icon" href="{{ asset('themes/default/assets/img/icon.png')}}" type="image/x-icon">
-<link href="{{ asset('/themes/default/assets/css/materialize.min.css')}}" type="text/css" id="materialize" rel="stylesheet" media="screen,projection"/>
-<link href="{{ asset('themes/default/assets/css/plugins.css')}}" type="text/css" id="plugins" rel="stylesheet" media="screen,projection"/>
-<link href="{{ asset('themes/default/assets/css/style.css')}}" type="text/css" id="style" rel="stylesheet" media="screen,projection"/>
-<link href="{{ asset('themes/default/assets/css/overrides.css')}}" type="text/css" id="overrides" rel="stylesheet" media="screen,projection"/>
-<link href="{{ asset('themes/default/assets/css/ie.css')}}" type="text/css" id="ie" rel="stylesheet" media="screen,projection"/>
+<link rel="icon" href="http://mysite.net//themes/default/assets/img/icon.png" type="image/x-icon">
+<link href="http://mysite.net//themes/default/assets/css/materialize.min.css" type="text/css" id="materialize" rel="stylesheet" media="screen,projection"/>
+<link href="http://mysite.net//themes/default/assets/css/plugins.css" type="text/css" id="plugins" rel="stylesheet" media="screen,projection"/>
+<link href="http://mysite.net//themes/default/assets/css/style.css" type="text/css" id="style" rel="stylesheet" media="screen,projection"/>
+<link href="http://mysite.net//themes/default/assets/css/overrides.css" type="text/css" id="overrides" rel="stylesheet" media="screen,projection"/>
+<link href="http://mysite.net//themes/default/assets/css/ie.css" type="text/css" id="ie" rel="stylesheet" media="screen,projection"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
-<link href="{{ asset('themes/default/assets/css/night.css')}}" type="text/css" id="night-mode-css" rel="stylesheet" media="screen,projection"/>
+
+
 
 <script>
     document_title = document.title;
         window.site_url =  "http://mysite.net/";
-        window.ajax = "{{ asset('aj/')}}";
-        window.theme_url = "{{ asset('themes/default/')}}";
+        window.ajax = "http://mysite.net//aj/";
+        window.theme_url = "http://mysite.net//themes/default/";
         window.worker_updateDelay = '4000';
         window.email_notification = '1';
-        window.media_path = "{{ asset('')}}";
+        window.media_path = "http://mysite.net//";
         window.current_route1 = "/login";
         window.current_route2 = "/";
         window.current_route3 = "/";
@@ -32,7 +33,7 @@
         window.located = "7";
         window.ajaxsend = true;
         window.maintenance_mode = ""
-        var imageAddr = "{{ asset('themes/default/assets/img/logof.png" + "?n=')}}" + Math.random();
+        var imageAddr = "http://mysite.net//themes/default/assets/img/logof.png" + "?n=" + Math.random();
         var startTime, endTime;
         var downloadSize = 5616998;
         var download = new Image();
@@ -52,174 +53,12 @@
           <script src="https://quickdatescript.com/themes/default/assets/js/functions.js" type="text/javascript" id="functions"></script>
 
     <!-- onesignal -->
-    <link rel="manifest" href="{{ asset('themes/default/assets/js/OneSignalSDKFiles/manifest.json">
+    <link rel="manifest" href="http://mysite.net//themes/default/assets/js/OneSignalSDKFiles/manifest.json">
     <script src="https://quickdatescript.com/OneSignalSDKWorker.js" async='async'></script>
-    <script>
-        var push_user_id = '';
-        var my_id = '';
-        var OneSignal = window.OneSignal || [];
-            OneSignal.push(["init", {
-                appId: "f799dc13-ec22-4d1f-9306-b9fbde7d6106",
-                allowLocalhostAsSecureOrigin: true,
-                autoRegister: true, /* Set to true to automatically prompt visitors */
-                notifyButton: {
-                enable: true /* Set to false to hide */
-                },
-                persistNotification: false,
-                }]);
-            OneSignal.push(function () {
-                OneSignal.getUserId(function(userId) {
-                    push_user_id = userId;
-                    if (userId != my_id) {
-                        $.get( window.ajax + 'onesignal/update_user_device_id', { id:push_user_id } );
-                    }
-                });
-                OneSignal.on('subscriptionChange', function (isSubscribed) {
-                    if (isSubscribed == false) {
-                        $.get( window.ajax + 'onesignal/remove_user_device_id', {} );
-                    } else {
-                        $.get( window.ajax + 'onesignal/update_user_device_id', { id:push_user_id } );
-                    }
-                });
-
-                OneSignal.on('notificationDisplay', function (event) {
-                    console.warn('OneSignal notification displayed:', event);
-    </script>
-    <script>
-        function bindAjaxElement(item,e) {
-            if ($(item).attr('id') !== 'notificationbtn'){
-                $("#loader").css("display", "block");
-            }
-            var url ="";
-            var data_ajax = $(item).attr('data-ajax');
-            var data_ajax_post = $(item).attr('data-ajax-post');
-            var data_ajax_callback = $(item).attr('data-ajax-callback');
-            window.itm = $(item).attr('id');
-
-            if (typeof data_ajax !== typeof undefined && data_ajax !== false) {
-                e.preventDefault();
-                url = $(item).attr('data-ajax');
-                window.current_page = url;
-                $.ajax({
-                    url: window.site_url + url + window.maintenance_mode,
-                    data:'url='+url+'&ajax=true',
-                    type: "POST",
-                    timeout: 60000,
-                    success: function(result) {
-                    $('body').css({'overflow':'inherit'});
-                        $("#loader").css("display","none");
-
-                        var is_user_logged_in = $( result ).filter( '.is_user_logged_in' ).html();
-                        if( typeof is_user_logged_in !== "undefined" ){
-                        if( is_user_logged_in !== "1" ){
-                            window.location.href = "http://axiomkz.me//login";
-                        }
-                    }
-                        var title = $( result ).filter( '.page_title' ).html();
-                        var page_name = $( result ).filter( '.page_name' ).html();
-                            window.current_page = page_name;
-
-                        if(page_name !== 'profile' ){
-                            $('meta[name=robots]').remove();
-                            $('meta[name=googlebot]').remove();
-                        }
-                        $('#container').html(result);
-                        window.history.pushState({state:'new'},'', window.site_url + url);
-
-
-                        $("html, body").animate({ scrollTop: 0 }, 150);
-                        custom_footer_js(page_name);
-
-                        document.title = decodeHtml( title );
-                        window.title = decodeHtml( title );
-                        document.getElementsByTagName('title')[0].innerHTML = decodeHtml( title );
-
-                        M.updateTextFields();
-
-                           window.onpopstate = function(event) {
-                               $(window).unbind('popstate');
-                               window.location.href = document.location;
-                           };
-
-                        event_runner(true);
-                    },
-                    error: function(result){
-                    console.warn(result);
-                }
-                });
-            }
-
-            if (typeof data_ajax_post !== typeof undefined && data_ajax_post !== false) {
-
-                url = window.ajax + $(item).attr('data-ajax-post') + window.maintenance_mode;
-                var params = $(item).attr('data-ajax-params');
-                var callback = $(item).attr('data-ajax-callback');
-                var formData = new FormData();
-                var data_ajax_template = $(item).attr('data-ajax-template');
-
-                if (params !== ''){
-                    params.split("&").forEach(function(item) {
-                        var s = item.split("="), k = s[0], v = s[1];
-                        formData.append(k, decodeURIComponent(s[1]) );
-                    });
-                }
-
-                if (typeof data_ajax_template !== typeof undefined) {
-                    formData.append('data_ajax_template', data_ajax_template);
-                }
-                window.ajaxsend = false;
-                $.ajax({
-                    url: url,
-                    type: "POST",
-                    data: formData,
-                    contentType: false,
-                    processData: false,
-                    success: function(result) {
-                    //     window.ajaxsend = true;
-                    //     console.log('fuck1')
-                }
-                }).done(function (result) {
-                    window.ajaxsend = true;
-                    if (result.can_send == 1) {
-                        SendMessages();
-                    }
-                    var fn = window[callback];
-                    if (typeof fn === "function") fn( result );
-
-                }).error(function (data) {
-                    window.ajaxsend = true;
-                    if( data.responseJSON.spam == true ) {
-                        //$('.chat_foot').remove();
-
-                        $('#chat_declined_modal').modal();
-                        $('#chat_declined_modal #chat_declined_modal_container').html(data.responseJSON.message);
-                        $('#chat_declined_modal').modal('open');
-                    }
-                });
-            }
-
-
-            if( typeof data_ajax_post === typeof undefined && typeof data_ajax === typeof undefined ){
-                $("#loader").css("display","none");
-            }
-
-        }
-        window.onload = function () {
-
-            $("body").on("click", "a,button,span", function(e) {
-                bindAjaxElement(this,e);
-            });
-
-            $(document).ajaxStart(function() {
-            }).ajaxSuccess(function() {
-                $("#loader").css("display","none");
-            });
-
-        };
-    </script>
+    
 </head>
 <body class="index-page">
-        <div id="loader" class="dt_ajax_progress"></div>
+       
         <!-- Header not-logged-in -->
     <nav role="navigation" id="nav-not-logged-in" style="height: 80px;">
         <div class="nav-wrapper container">
@@ -227,14 +66,14 @@
                 <a  href="http://mysite.net//" class="brand-logo"> <img style="height: 46px;width: 198px;margin-top: 13px;" src="http://mysite.net//themes/default/assets/img/logof.png" /></a>
             </div>
             <ul class="right" style="padding-top: 15px;">
-                <li class="hide_mobi_login"><a href="http://mysite.net//login" data-ajax="/login" class="btn-flat waves-effect text-main qdt_hdr_auth_btns" >Вход</a></li>
-                <li class="hide_mobi_login"><a href="http://mysite.net//register" data-ajax="/register" class="btn-flat btn btn_primary waves-effect waves-light white-text qdt_hdr_auth_btns">Регистрация</a></li>
+                <li class="hide_mobi_login"><a href="{{ route('login') }}"  class="btn-flat waves-effect text-main qdt_hdr_auth_btns" >{{ __('Вход') }}</a></li>
+                <li class="hide_mobi_login"><a href="{{ route('register') }}"  class="btn-flat btn btn_primary waves-effect waves-light white-text qdt_hdr_auth_btns">{{ __('Регистрация') }}</a></li>
                 <div class="show_mobi_login">
                     <a class="dropdown-trigger" href="#" data-target="log_in_dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path fill="#222" d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" /></svg></a>
                     <ul id="log_in_dropdown" class="dropdown-content">
-                        <li><a href="http://mysite.net//login" data-ajax="/login">Вход</a></li>
-                        <li><a href="http://mysite.net//register" data-ajax="/register">Регистрация</a></li>
+                        <li><a class="nav-link" href="{{ route('login') }}">{{ __('Вход') }}</a></li>
+                        <li><a class="nav-link" href="{{ route('register') }}">{{ __('Регистрация') }}</a></li>
                     </ul>
                 </div>
             </ul>
@@ -244,56 +83,27 @@
 
         <!-- Top Hero  -->
         <div class="parallax-container header_bg parallax_bg">
-            <div class="section">
+            <div class="section" style="margin-top: -60px;">
                 <div class="container">
-                    <h1 class="header center">Поиск знакомств по совместимости.</h1>
-                    <div class="row center">
-                        <h5 class="header col s12 light">Добавляйтесь, и знакомтесь с людьми подходящих вам по психотипу, точнейшие подборы основанные на тестах, теперь доступно всем желающим!</h5>
+                    <h1 class="header center" style="margin-bottom: 30px;">Поиск знакомств по совместимости</h1>
+                    <div class="row center" style="float: right;">
+                        <h5 class="header col s12 light" style="font-size: 42px;margin: 15px;">Добавляйтесь, и знакомтесь с<br> людьми подходящих вам по <br> психотипу, точнейшие подборы<br> основанные на тестах, теперь<br> доступно всем желающим!</h5>
                     </div>
-                    <div class="row center">
-                        <a href="http://mysite.net//register" class="btn-large waves-effect waves-light btn_primary lighten-1 bold btn_round">Присоединиться</a>&nbsp;&nbsp;&nbsp;
+                    <div class="row center" id="leon" style="margin-top: 350px;text-align: center;">
+
+                        <a href="{{ route('register') }}" class="btn-large waves-effect waves-light btn_primary lighten-1 bold btn_round">{{ __('Присоединиться') }}</a>&nbsp;&nbsp;&nbsp;
                         
                     </div>
                 </div>
             </div>
-            <!--<div class="parallax"><img src="http://mysite.net//themes/default/assets/img/dating.jpg" alt="2Polovinka"></div>  -->
+            <div class="parallax"><img src="http://mysite.net//puzzle-1721635_1920.jpg"  alt="2Polovinka"></div>  
         </div>
         <!-- End Top Hero  -->
 
-        <!-- Filters  -->
-        <div class="container">
-            <div class="section dt_filters bg_gradient">
-                <div class="row" style="text-align: center;margin-bottom: 10px;">
-                    <div class="input-field col s2">
-                        <img src="http://mysite.net//themes/default/assets/img/login.png" style="width: 80px;height: 80px;" alt="">
-                        <h6>Зарегистрируйтесь</h6> 
-                    </div>
-                    <div class="input-field col s2">
-                        <img src="http://mysite.net//themes/default/assets/img/personality.png" style="width: 80px;height: 80px;" alt="">
-                       <h6>Узнайте о своем характере</h6> 
-                    </div>
-                    <div class="input-field col s2">
-                        <img src="http://mysite.net//themes/default/assets/img/distance.png" style="width: 80px;height: 80px;" alt="">
-                       <h6>Ищите совместимых людей</h6> 
-                    </div>
-                    <div class="input-field col s2">
-                        <img src="http://mysite.net//themes/default/assets/img/phone.png" style="width: 80px;height: 80px;" alt="" alt="">
-                       <h6>Знакомьтесь</h6> 
-                    </div>
-                    <div class="col" style="margin-top: 35px; ">
-                        <a href="http://mysite.net//login" class="waves-effect waves-light btn-flat btn-large bold btn_glossy">Давай начнем</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Filters  -->
-                <div class="header__arrows" style="text-align: center;margin-top:-30px;margin-bottom: 35px;">
-                      <a href="#" class="animated fadeInDown infinite slow">
-                         <img src="http://mysite.net//themes/default/assets/img/arrows-down.svg" alt="">
-                      </a>
-                </div>
+        
+               
         <!-- How it Works  -->
-        <div class="container">
+        <div class="container" style="margin-top: 15px;">
             <div class="section dt_how_work" id="how_it_work">
                 <div class="row">
                     <div class="col s12">
@@ -333,7 +143,7 @@
                     <div class="row">
                         <div class="col s12 center-align dt_get_start">
                             <h4 class="white-text light">Находите совместимых с вами людей здесь на 2polovinka.</h4>
-                            <a href="/register" class="waves-effect waves-light btn-flat btn-large bold btn_glossy">Начать</a>
+                            <a href="http://axiomkz.me//register" class="waves-effect waves-light btn-flat btn-large bold btn_glossy">Начать</a>
                         </div>
                     </div>
                 </div>
