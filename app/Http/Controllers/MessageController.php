@@ -36,9 +36,8 @@ class MessageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
     }
 
     /**
@@ -58,9 +57,21 @@ class MessageController extends Controller
      * @param  \App\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function show(Message $message)
+    public function show($id)
     {
-        //
+
+        $messages = Message::where( function($q) use($id) {
+            $q->where('from',auth()->id());
+            $q->where('to', $id );
+        })->orwhere( function($q) use($id) {
+            $q->where('to',auth()->id());
+            $q->where('from', $id );
+        })->get(); // (a = 1 AND b = 2) OR (c = 1 AND d = 2)
+        
+        return view('user.message.show',[
+            'messages'   =>  $messages,
+        ]);
+        
     }
 
     /**
