@@ -50,5 +50,7 @@ Route::get('/profile',function() {
     return view('profile');
 });
 
+Route::resource('message','MessageController');
+
 
 Route::post('test','UserController@test')->name('test');
