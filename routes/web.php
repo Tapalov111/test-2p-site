@@ -54,3 +54,7 @@ Route::resource('message','MessageController');
 
 
 Route::post('test','UserController@test')->name('test');
+
+Route::get('script', function(){
+    return view('scrip');
+});

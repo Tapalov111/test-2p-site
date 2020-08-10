@@ -48,7 +48,12 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        \App\Message::create([
+            'from'  =>  \Auth::user()->id,
+            'to'    =>  $request->to,
+            'text'  =>  $request->text,
+        ]);
+
     }
 
     /**
@@ -59,6 +64,7 @@ class MessageController extends Controller
      */
     public function show($id)
     {
+        Message::where('from',$id)->where( 'to', auth()->id() )->update(['read' => true]);
 
         $messages = Message::where( function($q) use($id) {
             $q->where('from',auth()->id());
@@ -70,6 +76,7 @@ class MessageController extends Controller
         
         return view('user.message.show',[
             'messages'   =>  $messages,
+            'friend_id'  => $id,   
         ]);
         
     }
@@ -106,5 +113,12 @@ class MessageController extends Controller
     public function destroy(Message $message)
     {
         //
+    }
+
+    public function getAll()
+    {
+        $messages  = \App\Message::all();
+
+        return response()->json($messages);
     }
 }
