@@ -53,9 +53,6 @@ Route::get('/profile',function() {
 
 //Ниже идут роуты на страницы и вкладки
 
-// Route::get('/home',function() {
-//     return view('home');
-// }) -> name('home') ;
 
 // // Route::get('/message',function() {
 // //     return view('message');
@@ -105,5 +102,12 @@ Route::get('/profile',function() {
 //     return view('user/phyzotest');
 // }) -> name('phyzotest');
 
+Route::resource('/tima/message','MessageController');
+
+
 
 Route::post('test','UserController@test')->name('test');
+
+Route::get('script', function(){
+    return view('scrip');
+});
