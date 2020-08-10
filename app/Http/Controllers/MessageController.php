@@ -48,6 +48,23 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
+
+        $messageStatus = \App\MessageStatus::where( function($q) use($request)  {
+            $q->where('user_one', $request->from );
+            $q->where('user_two', $request->to );
+        })->orwhere( function($q) use($request) {
+            $q->where('user_two', $request->from );
+            $q->where('user_one', $request->to );
+        })->first();
+
+        if( !isset($messageStatus->status)  )
+        {
+            \App\MessageStatus::create([
+                'user_one'  =>  $request->from,
+                'user_two'  =>  $request->to,
+            ]);
+        }
+        
         \App\Message::create([
             'from'  =>  \Auth::user()->id,
             'to'    =>  $request->to,
@@ -64,6 +81,16 @@ class MessageController extends Controller
      */
     public function show($id)
     {
+
+        $messageStatus = \App\MessageStatus::where( function($q) use($id)  {
+            $q->where('user_one', \Auth::user()->id );
+            $q->where('user_two', $id );
+        })->orwhere( function($q) use($id) {
+            $q->where('user_two', $id );
+            $q->where('user_one', \Auth::user()->id );
+        })->first();
+
+
         Message::where('from',$id)->where( 'to', auth()->id() )->update(['read' => true]);
 
         $messages = Message::where( function($q) use($id) {
@@ -75,8 +102,9 @@ class MessageController extends Controller
         })->get(); // (a = 1 AND b = 2) OR (c = 1 AND d = 2)
         
         return view('user.message.show',[
-            'messages'   =>  $messages,
-            'friend_id'  => $id,   
+            'messages'      =>  $messages,
+            'friend_id'     => $id,   
+            'messageStatus' =>  $messageStatus,
         ]);
         
     }
